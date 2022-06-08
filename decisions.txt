@@ -1,0 +1,17 @@
+Architecture
+------------
+The application follows layered architecture.
+The application is mainly divided into three layers they are as follows
+ 1) Controller layer:
+    It contains FetchController class and it act as a router which maps the HTTP post request to fetchValue() method
+    It takes category code as request body in JSON format.
+    e.g. { "categoryCode" : 10 }
+
+ 2) Service layer:
+    It contains the actual business logic.
+    It has FetchService class it contains code for getting the dabase value for given category code.
+    It calculates the next value and updates the database and returns the response.
+
+ 3) Repository layer
+    JpaRepository is used to handle database operation.
+

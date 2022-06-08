@@ -1,0 +1,32 @@
+Terminology
+API: Application Program Interface
+REST: REpresentational State Transfer
+
+Anatomy Of A Request
+-----------------------
+Endpoint (Route): http://localhost:8080/FetchNextNumber
+HTTP Method     : post
+HTTP Headers    : Content-Type: applicaion/json
+Data (payload)  : { "categoryCode" : 10 }
+
+demo response:
+{
+   "categoryCode" : 10,
+   "oldValue" : 1,
+   "newValue" : 10
+}
+
+            project structure
+------------------------------------
+   package           descriptiion
+  --------          ---------------
+controller    :    all rest controllers
+service       :    all service classes
+model         :    all Entities or DTO's
+repository    :    data access layer interfaces
+exception     :    custom exception handling classes
+
+database related files
+---------------------------
+schema.sql contains the database queries
+import.sql contains initial data to be inserted into database.
